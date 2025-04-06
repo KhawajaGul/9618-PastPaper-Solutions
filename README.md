@@ -1,4 +1,4 @@
-# 9618-PastPaper-Solutions
+# A Levels Computer Science (9618)
 
 <p>
   <a href="https://www.instagram.com/kurlyatzainematics/" target="_blank">
