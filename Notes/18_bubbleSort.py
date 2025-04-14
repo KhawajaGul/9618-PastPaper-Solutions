@@ -39,8 +39,6 @@ def swap(a, b):
     print(b)    # 5
     return a, b
 
-
-
 def BubbleSort(kashif):
     maxComp = len(kashif) - 1
     flag = False
