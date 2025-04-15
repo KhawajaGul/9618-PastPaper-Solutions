@@ -55,5 +55,40 @@ def PrintTrees(Item):
 
     print(f"{name} has a maximum height {maxHeight} a maximum width {maxWidth} and grows {growth}cm a year. {lastline}")
 
+
+def ChooseTree(Trees):
+    Evergreen = input("Is your tree evergreen? Write yes/no: ")
+    MaxH = input("Pls enter the max height you want for the tree")
+    MaxW = input("Pls enter the max width you want for the tree")
+
+    myTrees = []
+
+    for i in Trees:
+        print(i.GetTreeName()," | ", i.GetMaxHeight()," | ", i.GetMaxWidth()," | ", i.GetEvergreen())
+        if i.GetMaxWidth() <= MaxW and i.GetMaxHeight() <= MaxH and i.GetEvergreen().lower()==Evergreen.lower():
+            myTrees.append(i)
+            PrintTrees(i)
+
+    print(len(myTrees))
+
+    if len(myTrees) == 0:
+        print("No trees meet the output")
+
+    Flag = False
+    while Flag == False:
+        purchaseName = input("Please enter tree name: ")
+        for i in myTrees:
+            if i.GetTreeName() == purchaseName:
+                Flag = True
+                purchaseHeight = input("Please enter the purchase height of the tree")
+                Years = (i.GetMaxHeight()-purchaseHeight)/i.GetGrowth()
+                print(Years)
+
+
+
+
+
+
 TreeObjects = ReadData()
 PrintTrees(TreeObjects[0])
+ChooseTree(TreeObjects)
